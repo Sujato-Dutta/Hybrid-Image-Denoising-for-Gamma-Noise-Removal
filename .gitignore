@@ -47,16 +47,12 @@ results_SAR/
 figures/
 
 
-
-# Optional local TeX build artifacts
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.toc
-paper/*.bbl
-paper/*.blg
-paper/*.fls
-paper/*.fdb_latexmk
-paper/*.synctex.gz
-
 data/
+
+# Local document inspection and dependency artifacts
+/tmp/
+/results_camera_ready/
+/logs/
+
+docs/
+/paper/

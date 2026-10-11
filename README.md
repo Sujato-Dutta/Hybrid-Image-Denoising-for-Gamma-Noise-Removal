@@ -133,3 +133,6 @@ completed training and GPU benchmarks.
 ## License
 
 This project is for academic research purposes.
+
+## Author
+Sujato Dutta
