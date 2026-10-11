@@ -98,6 +98,38 @@ python evaluate_sar_all.py
 python generate_paper_figures.py
 ```
 
+## Camera-ready Uformer comparison
+
+The camera-ready extension adds a native grayscale Uformer-T (CVPR 2022) at
+Gamma noise levels 1 and 10. Submitted Hybrid++ accuracy values are retained.
+The implementation plan and progress tracker are in
+`docs/CAMERA_READY_IMPLEMENTATION_PLAN.md` and `docs/CAMERA_READY_TASKS.csv`.
+
+Install `requirements-camera-ready.txt` into an environment with the appropriate
+PyTorch build. A full A100 Slurm allocation runs both training levels, fixed-input
+evaluation, complexity profiling and artifact export through
+`scripts/submit_uformer.slurm`. On the DGX, all compute, including CPU tests and
+protocol preparation, must run inside Slurm allocations. Follow the supplied DGX
+training document; do not run compute workloads on the login node.
+
+```powershell
+python scripts/faculty_workspace.py status
+python scripts/faculty_workspace.py fetch
+```
+
+The faculty helper reads the locally ignored `.env` password without displaying
+or uploading it. Login-node actions use only SFTP and Slurm management commands.
+The Uformer experiment completed through job 27030. Matched qualitative figure
+generation is now running as job 27113 on an A100 10 GB MIG slice. Its Hybrid++
+training uses `scripts/train_hybrid_qualitative.py`; paired rendering uses
+`scripts/plot_hybrid_uformer_paired.py`. Historical Hybrid++ benchmark scores are
+retained. The former student job 26953 was cancelled. Do not submit a competing
+copy. Timeout warnings schedule dependent checkpoint continuations.
+Results stay under `results_camera_ready/`; generated manuscript tables are under
+`paper/generated/`, and all paper figures are under `paper/figures/`.
+The entire `paper/` folder is local and ignored by Git. Final export requires
+completed training and GPU benchmarks.
+
 ## License
 
 This project is for academic research purposes.
