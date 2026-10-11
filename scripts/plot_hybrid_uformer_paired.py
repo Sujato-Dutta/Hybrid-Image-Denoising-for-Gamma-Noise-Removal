@@ -15,6 +15,9 @@ import torch
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+# Springer requires scalable embedded fonts in the PDF figure exports.
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
 from src.camera_ready_protocol import (CachedCorruptions, array_hash, prepare_protocol,
                                       read_config, repo_path, write_json)
 from src.hybrid_plus_v2 import HybridPlusModelV2
