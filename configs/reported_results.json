@@ -1,0 +1,10 @@
+{
+  "provenance": "Submitted paper; retained historical results, original checkpoints unavailable",
+  "rows": [
+    {"model":"BM3D","parameters":0,"parameter_status":"no_learned_parameters","L1_psnr":12.67,"L1_ssim":0.384,"L10_psnr":24.64,"L10_ssim":0.755},
+    {"model":"PDE Baseline","parameters":0,"parameter_status":"no_learned_parameters","L1_psnr":17.66,"L1_ssim":0.422,"L10_psnr":23.07,"L10_ssim":0.651},
+    {"model":"TNRD","parameters":21000,"parameter_status":"reported_count_unverified","L1_psnr":18.55,"L1_ssim":0.324,"L10_psnr":23.17,"L10_ssim":0.628},
+    {"model":"DnCNN","parameters":556097,"parameter_status":"architecture_verified","L1_psnr":21.09,"L1_ssim":0.484,"L10_psnr":25.94,"L10_ssim":0.761},
+    {"model":"Hybrid++","parameters":44408,"parameter_status":"architecture_verified","L1_psnr":20.86,"L1_ssim":0.463,"L10_psnr":25.02,"L10_ssim":0.692}
+  ]
+}
